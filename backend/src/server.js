@@ -1,13 +1,14 @@
 const express = require('express')
 const dotenv = require('dotenv')
-// const connectDB = require('../config/db')
+const connectDB = require('../config/db')
 
-dotenv.config() // 환경 변수 로드
+// 환경 변수 로드
+dotenv.config()
 
 const app = express()
 
 // MongoDB 연결
-// connectDB()
+connectDB()
 
 // 미들웨어 설정
 app.use(express.json());
